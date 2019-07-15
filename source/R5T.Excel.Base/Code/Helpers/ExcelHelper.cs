@@ -6,14 +6,14 @@ namespace R5T.Excel
 {
     public static class ExcelHelper
     {
-        public const string ExcelExecutableCommandValue = @"EXCEL.EXE";
+        public const string DefaultExcelExecutableFilePath = @"C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE";
 
 
-        public static void OpenInExcel(string excelFilePath)
+        public static void OpenInExcel(string excelFilePath, string excelExecutableFilePath = ExcelHelper.DefaultExcelExecutableFilePath)
         {
             var arguments = $@"""{excelFilePath}"""; // Surround in quotes.
 
-            Process.Start(ExcelHelper.ExcelExecutableCommandValue, arguments);
+            Process.Start(excelExecutableFilePath, arguments);
         }
     }
 }
