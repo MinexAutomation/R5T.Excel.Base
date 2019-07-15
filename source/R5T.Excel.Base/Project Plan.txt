@@ -1,4 +1,8 @@
 R5T.Excel.Base - A base library of Excel functionality.
 
-Goals
+This library contains Excel-related functionality that does NOT depend on Excel COM automation via primary interop assemblies (PIAs).
+
+Understandably, this functionality is rather limited. However, functionality includes:
+
+* Starting Excel with an Excel file path. This is useful for automatically opening the results of an analysis for user review.
 
